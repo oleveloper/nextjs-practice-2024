@@ -31,7 +31,7 @@ export default async function RootLayout({
           <ol>
             {/* @ts-ignore */}
             {data.map((item)=>{
-              return <li key={item.id}><Link href={'/read/' + item.id}>{item.title}</Link></li>
+              return <li key={item.id}><Link href={`/read/${item.id}`}>{item.title}</Link></li>
             })}
           </ol>
         </nav>

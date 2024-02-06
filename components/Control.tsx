@@ -22,7 +22,7 @@ export default function Control(){
         <li><Link href="/create">create</Link></li>
         {id === undefined ? null : 
         <>
-            <li><Link href="/update/id">update</Link></li>
+            <li><Link href={`/update/${id}`}>update</Link></li>
             <li><button onClick={deleteHandler}>delete</button></li>
         </>}
     </ul>
