@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "../../node_modules/next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,21 +16,22 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <header>
-          <h1><a href="/">WEB!</a></h1>
+          <h1><Link href="/">WEB!</Link></h1>
+          <input type="text" placeholder="search?"></input>
         </header>
         <nav>
           <ol>
-            <li><a href="/read/1">html</a></li>
-            <li><a href="/read/2">css</a></li>
-            <li><a href="/read/3">js</a></li>
+            <li><Link href="/read/1">html</Link></li>
+            <li><Link href="/read/2">css</Link></li>
+            <li><Link href="/read/3">js</Link></li>
           </ol>
         </nav>
         <article>
         {children}
         </article>
         <ul>
-          <li><a href="/create">create</a></li>
-          <li><a href="/update/id">update</a></li>
+          <li><Link href="/create">create</Link></li>
+          <li><Link href="/update/id">update</Link></li>
           <li><button>delete</button></li>
         </ul>
       </body>
