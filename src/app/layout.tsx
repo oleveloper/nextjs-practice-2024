@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { useParams } from "next/navigation";
 import { useEffect } from "react";
+import Control from "../../components/Control";
 import Link from "../../node_modules/next/link";
 import "./globals.css";
 
@@ -36,11 +38,7 @@ export default async function RootLayout({
         <article>
         {children}
         </article>
-        <ul>
-          <li><Link href="/create">create</Link></li>
-          <li><Link href="/update/id">update</Link></li>
-          <li><button>delete</button></li>
-        </ul>
+        <Control></Control>
       </body>
     </html>
   );
